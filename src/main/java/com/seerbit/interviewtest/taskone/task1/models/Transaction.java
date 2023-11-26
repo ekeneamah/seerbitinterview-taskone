@@ -1,12 +1,21 @@
 package com.seerbit.interviewtest.taskone.task1.models;
 
 import java.math.BigDecimal;
+import java.time.Instant;
 
 public class Transaction {
     private BigDecimal amount;
-    private String timestamp;
+    private Instant timestamp;
 
-    // getters and setters
+    // Constructors, getters, and setters
+
+    public Transaction() {
+    }
+
+    public Transaction(BigDecimal amount, Instant timestamp) {
+        this.amount = amount;
+        this.timestamp = timestamp;
+    }
 
     public BigDecimal getAmount() {
         return amount;
@@ -16,12 +25,11 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public String getTimestamp() {
+    public Instant getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(String timestamp) {
+    public void setTimestamp(Instant timestamp) {
         this.timestamp = timestamp;
     }
 }
-
